@@ -40,6 +40,7 @@
 		938A248F1A1FE40E00767D48 /* FLWebViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FLWebViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		938A24941A1FE40E00767D48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		938A24951A1FE40E00767D48 /* FLWebViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FLWebViewTests.m; sourceTree = "<group>"; };
+		938A24A01A1FE4CF00767D48 /* FLWebViewProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLWebViewProvider.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +82,7 @@
 		938A24781A1FE40E00767D48 /* FLWebView */ = {
 			isa = PBXGroup;
 			children = (
+				938A249F1A1FE4B200767D48 /* Protocols */,
 				938A247D1A1FE40E00767D48 /* AppDelegate.h */,
 				938A247E1A1FE40E00767D48 /* AppDelegate.m */,
 				938A24801A1FE40E00767D48 /* ViewController.h */,
@@ -117,6 +119,14 @@
 				938A24941A1FE40E00767D48 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		938A249F1A1FE4B200767D48 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				938A24A01A1FE4CF00767D48 /* FLWebViewProvider.h */,
+			);
+			name = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -414,6 +424,7 @@
 				938A249B1A1FE40E00767D48 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		938A249C1A1FE40E00767D48 /* Build configuration list for PBXNativeTarget "FLWebViewTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +433,7 @@
 				938A249E1A1FE40E00767D48 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
