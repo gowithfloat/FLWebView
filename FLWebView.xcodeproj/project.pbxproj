@@ -15,6 +15,7 @@
 		938A248A1A1FE40E00767D48 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 938A24881A1FE40E00767D48 /* LaunchScreen.xib */; };
 		938A24961A1FE40E00767D48 /* FLWebViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 938A24951A1FE40E00767D48 /* FLWebViewTests.m */; };
 		938A24A41A1FE82300767D48 /* UIWebView+FLUIWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 938A24A31A1FE82300767D48 /* UIWebView+FLUIWebView.m */; };
+		938A24A71A1FE8B800767D48 /* WKWebView+FLWKWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 938A24A61A1FE8B800767D48 /* WKWebView+FLWKWebView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,8 @@
 		938A24A01A1FE4CF00767D48 /* FLWebViewProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLWebViewProvider.h; sourceTree = "<group>"; };
 		938A24A21A1FE82300767D48 /* UIWebView+FLUIWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+FLUIWebView.h"; sourceTree = "<group>"; };
 		938A24A31A1FE82300767D48 /* UIWebView+FLUIWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+FLUIWebView.m"; sourceTree = "<group>"; };
+		938A24A51A1FE8B800767D48 /* WKWebView+FLWKWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WKWebView+FLWKWebView.h"; sourceTree = "<group>"; };
+		938A24A61A1FE8B800767D48 /* WKWebView+FLWKWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "WKWebView+FLWKWebView.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +141,8 @@
 			children = (
 				938A24A21A1FE82300767D48 /* UIWebView+FLUIWebView.h */,
 				938A24A31A1FE82300767D48 /* UIWebView+FLUIWebView.m */,
+				938A24A51A1FE8B800767D48 /* WKWebView+FLWKWebView.h */,
+				938A24A61A1FE8B800767D48 /* WKWebView+FLWKWebView.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -244,6 +249,7 @@
 			files = (
 				938A24821A1FE40E00767D48 /* ViewController.m in Sources */,
 				938A24A41A1FE82300767D48 /* UIWebView+FLUIWebView.m in Sources */,
+				938A24A71A1FE8B800767D48 /* WKWebView+FLWKWebView.m in Sources */,
 				938A247F1A1FE40E00767D48 /* AppDelegate.m in Sources */,
 				938A247C1A1FE40E00767D48 /* main.m in Sources */,
 			);
