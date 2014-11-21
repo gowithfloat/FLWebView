@@ -6,8 +6,24 @@
 //  Copyright (c) 2014 Float Mobile Learning. All rights reserved.
 //
 
-#ifndef FLWebView_FLWebViewProvider_h
-#define FLWebView_FLWebViewProvider_h
+#import <Foundation/Foundation.h>
 
+/*
+ * This class defines methods that FLUIWebView and FLWKWebView should implement in
+ * order to work with FLBrowserViewController.
+ */
+@protocol FLWebViewProvider <NSObject>
 
-#endif
+- (void) setDelegateViews: (UIViewController *) delegateView;
+
+- (UIView *) getAsUIView;
+
+- (NSURLRequest *) getRequest;
+
+- (void) loadRequest: (NSURLRequest *) request;
+
+- (BOOL) getIsLoading;
+
+- (BOOL) canGoBack;
+
+@end
