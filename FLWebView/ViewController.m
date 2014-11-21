@@ -16,12 +16,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    if (NSClassFromString(@"WKWebView")) {
+        _webView = [[WKWebView alloc] initWithFrame: self.view.bounds];
+    } else {
+        _webView = [[UIWebView alloc] initWithFrame: self.view.bounds];
+    }
+    
+    [self.view addSubview: [self webView]];
+    [self.view bringSubviewToFront: [self webView]];
+    [[self webView] setDelegateViews: self];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end
