@@ -14,6 +14,7 @@
 		938A24871A1FE40E00767D48 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 938A24861A1FE40E00767D48 /* Images.xcassets */; };
 		938A248A1A1FE40E00767D48 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 938A24881A1FE40E00767D48 /* LaunchScreen.xib */; };
 		938A24961A1FE40E00767D48 /* FLWebViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 938A24951A1FE40E00767D48 /* FLWebViewTests.m */; };
+		938A24A41A1FE82300767D48 /* UIWebView+FLUIWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 938A24A31A1FE82300767D48 /* UIWebView+FLUIWebView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,8 @@
 		938A24941A1FE40E00767D48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		938A24951A1FE40E00767D48 /* FLWebViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FLWebViewTests.m; sourceTree = "<group>"; };
 		938A24A01A1FE4CF00767D48 /* FLWebViewProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLWebViewProvider.h; sourceTree = "<group>"; };
+		938A24A21A1FE82300767D48 /* UIWebView+FLUIWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+FLUIWebView.h"; sourceTree = "<group>"; };
+		938A24A31A1FE82300767D48 /* UIWebView+FLUIWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+FLUIWebView.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +85,7 @@
 		938A24781A1FE40E00767D48 /* FLWebView */ = {
 			isa = PBXGroup;
 			children = (
+				938A24A11A1FE7CF00767D48 /* Categories */,
 				938A249F1A1FE4B200767D48 /* Protocols */,
 				938A247D1A1FE40E00767D48 /* AppDelegate.h */,
 				938A247E1A1FE40E00767D48 /* AppDelegate.m */,
@@ -127,6 +131,15 @@
 				938A24A01A1FE4CF00767D48 /* FLWebViewProvider.h */,
 			);
 			name = Protocols;
+			sourceTree = "<group>";
+		};
+		938A24A11A1FE7CF00767D48 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				938A24A21A1FE82300767D48 /* UIWebView+FLUIWebView.h */,
+				938A24A31A1FE82300767D48 /* UIWebView+FLUIWebView.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				938A24821A1FE40E00767D48 /* ViewController.m in Sources */,
+				938A24A41A1FE82300767D48 /* UIWebView+FLUIWebView.m in Sources */,
 				938A247F1A1FE40E00767D48 /* AppDelegate.m in Sources */,
 				938A247C1A1FE40E00767D48 /* main.m in Sources */,
 			);
