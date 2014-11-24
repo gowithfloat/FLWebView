@@ -1,3 +1,5 @@
 language: objective-c
-xcode_project: FLWebView.xcodeproj
-xcode_scheme: FLWebView
+before_install:
+    - brew update
+    - brew install xctool
+script: xctool -project FLWebView.xcodeproj -scheme FLWebView build test
