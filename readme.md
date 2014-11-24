@@ -1,7 +1,7 @@
 FLWebView
 =========
 
-<img style="align: center" src="float-logo.png">
+[<img style="align: center" src="float-logo.png">](http://floatlearning.com/)
 
 WKWebView with UIWebView fallback. WIP
 
