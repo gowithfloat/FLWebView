@@ -7,9 +7,11 @@ WKWebView with UIWebView fallback. WIP
 
 # Tools
 
-* [travis-lint](http://docs.travis-ci.com/user/getting-started/#Validate-Your-.travis.yml)
-* [xctool](https://github.com/facebook/xctool)
-* [travis-ci](https://travis-ci.org/)
+* [travis-ci](https://travis-ci.org/) - Automated unit testing.
+* [travis-lint](http://docs.travis-ci.com/user/getting-started/#Validate-Your-.travis.yml) - Local `Travis` settings validation.
+* [xctool](https://github.com/facebook/xctool) - Command-line `iOS` build scripts.
+* [homebrew](http://brew.sh/) - `OS X` package management, used to install `xctool`.
+* [ruby gems](https://rubygems.org/) - `Ruby` package management, used to install `travis-lint`.
 
 # License
 
