@@ -2,4 +2,4 @@ language: objective-c
 before_install:
     - brew update
     - brew install xctool
-script: xctool -project FLWebView.xcodeproj -scheme FLWebView build test -test-sdk iphonesimulator8.1
+script: sh test.sh
