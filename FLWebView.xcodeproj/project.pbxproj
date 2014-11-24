@@ -16,6 +16,7 @@
 		938A24961A1FE40E00767D48 /* FLWebViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 938A24951A1FE40E00767D48 /* FLWebViewTests.m */; };
 		938A24A41A1FE82300767D48 /* UIWebView+FLUIWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 938A24A31A1FE82300767D48 /* UIWebView+FLUIWebView.m */; };
 		938A24A71A1FE8B800767D48 /* WKWebView+FLWKWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 938A24A61A1FE8B800767D48 /* WKWebView+FLWKWebView.m */; };
+		9393B9D31A23E21000CFF324 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9393B9D21A23E21000CFF324 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		938A24A31A1FE82300767D48 /* UIWebView+FLUIWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+FLUIWebView.m"; sourceTree = "<group>"; };
 		938A24A51A1FE8B800767D48 /* WKWebView+FLWKWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WKWebView+FLWKWebView.h"; sourceTree = "<group>"; };
 		938A24A61A1FE8B800767D48 /* WKWebView+FLWKWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "WKWebView+FLWKWebView.m"; sourceTree = "<group>"; };
+		9393B9D21A23E21000CFF324 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9393B9D31A23E21000CFF324 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +73,7 @@
 		938A246D1A1FE40E00767D48 = {
 			isa = PBXGroup;
 			children = (
+				9393B9D21A23E21000CFF324 /* WebKit.framework */,
 				938A24781A1FE40E00767D48 /* FLWebView */,
 				938A24921A1FE40E00767D48 /* FLWebViewTests */,
 				938A24771A1FE40E00767D48 /* Products */,
