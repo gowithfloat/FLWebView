@@ -1,7 +1,7 @@
 FLWebView
 =========
 
-[<img style="align: center" src="float-logo.png">](http://floatlearning.com/)
+[![](./float-logo.png)](http://floatlearning.com/)
 
 WKWebView with UIWebView fallback. WIP
 
