@@ -101,6 +101,8 @@
 - (BOOL) shouldStartDecidePolicy: (NSURLRequest *) request
 {
     // do stuff
+    
+    return false;
 }
 
 - (void) didStartNavigation
