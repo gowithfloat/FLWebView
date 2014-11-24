@@ -1,4 +1,4 @@
-[FLWebView](https://github.com/floatlearning/FLWebView/)
+[FLWebView](https://github.com/floatlearning/FLWebView/) [![Build Status](https://travis-ci.org/floatlearning/FLWebView.svg?branch=master)](https://travis-ci.org/floatlearning/FLWebView)
 =========
 
 [![](./float-logo.png)](http://floatlearning.com/)
