@@ -77,13 +77,13 @@
 
 - (void) webView:(WKWebView *)webView didFailProvisionalNavigation:(WKNavigation *)navigation withError:(NSError *)error
 {
-    [self updateViewForWebViewState];
+    
 }
 
 - (void) webView:(WKWebView *)webView didCommitNavigation:(WKNavigation *)navigation
 {
     webView.request = [NSURLRequest requestWithURL: webView.URL];
-    [self updateViewForWebViewState];
+    
 }
 
 - (void) webView:(WKWebView *)webView didFailNavigation:(WKNavigation *)navigation withError:(NSError *)error
