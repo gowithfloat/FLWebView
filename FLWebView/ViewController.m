@@ -37,8 +37,8 @@
     return YES;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
+- (BOOL)prefersStatusBarHidden {
+    return YES;
 }
 
 #pragma mark - UIWebView Delegate Methods
