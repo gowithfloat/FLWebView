@@ -10,7 +10,7 @@
 
 @implementation UIWebView (FLWebView)
 
-- (void) setDelegatViews:(UIView<UIWebViewDelegate> *)delegateView
+- (void) setDelegateViews: (UIView<UIWebViewDelegate> *) delegateView
 {
     self.delegate = delegateView;
 }

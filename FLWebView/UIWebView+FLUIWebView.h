@@ -11,6 +11,6 @@
 
 @interface UIWebView (FLUIWebView) <FLWebViewProvider>
 
-- (void) setDelegatViews: (UIView<UIWebViewDelegate> *) delegateView;
+- (void) setDelegateViews: (UIView<UIWebViewDelegate> *) delegateView;
 
 @end
