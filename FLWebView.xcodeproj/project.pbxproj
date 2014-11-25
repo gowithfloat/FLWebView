@@ -11,7 +11,6 @@
 		938A247F1A1FE40E00767D48 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 938A247E1A1FE40E00767D48 /* AppDelegate.m */; };
 		938A24821A1FE40E00767D48 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 938A24811A1FE40E00767D48 /* ViewController.m */; };
 		938A24851A1FE40E00767D48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 938A24831A1FE40E00767D48 /* Main.storyboard */; };
-		938A24871A1FE40E00767D48 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 938A24861A1FE40E00767D48 /* Images.xcassets */; };
 		938A248A1A1FE40E00767D48 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 938A24881A1FE40E00767D48 /* LaunchScreen.xib */; };
 		938A24961A1FE40E00767D48 /* FLWebViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 938A24951A1FE40E00767D48 /* FLWebViewTests.m */; };
 		938A24A41A1FE82300767D48 /* UIWebView+FLUIWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 938A24A31A1FE82300767D48 /* UIWebView+FLUIWebView.m */; };
@@ -38,7 +37,6 @@
 		938A24801A1FE40E00767D48 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		938A24811A1FE40E00767D48 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		938A24841A1FE40E00767D48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		938A24861A1FE40E00767D48 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		938A24891A1FE40E00767D48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		938A248F1A1FE40E00767D48 /* FLWebViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FLWebViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		938A24941A1FE40E00767D48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -99,7 +97,6 @@
 				938A24801A1FE40E00767D48 /* ViewController.h */,
 				938A24811A1FE40E00767D48 /* ViewController.m */,
 				938A24831A1FE40E00767D48 /* Main.storyboard */,
-				938A24861A1FE40E00767D48 /* Images.xcassets */,
 				938A24881A1FE40E00767D48 /* LaunchScreen.xib */,
 				938A24791A1FE40E00767D48 /* Supporting Files */,
 			);
@@ -233,7 +230,6 @@
 			files = (
 				938A24851A1FE40E00767D48 /* Main.storyboard in Resources */,
 				938A248A1A1FE40E00767D48 /* LaunchScreen.xib in Resources */,
-				938A24871A1FE40E00767D48 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,6 +375,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = FLWebView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -391,6 +388,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = FLWebView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
