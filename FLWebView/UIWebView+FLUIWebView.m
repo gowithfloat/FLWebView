@@ -25,6 +25,11 @@
     return self.request;
 }
 
+- (void) loadRequestFromString: (NSString *) urlNameAsString
+{
+    [self loadRequest: [NSURLRequest requestWithURL:[NSURL URLWithString: urlNameAsString]]];
+}
+
 - (BOOL) getIsLoading
 {
     return self.isLoading;

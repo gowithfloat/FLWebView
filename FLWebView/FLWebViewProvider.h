@@ -35,6 +35,11 @@
 - (void) loadRequest: (NSURLRequest *) request;
 
 /*
+ * Convenience method to load a request from a string.
+ */
+- (void) loadRequestFromString: (NSString *) urlNameAsString;
+
+/*
  * Returns true if loading, false otherwise.
  */
 - (BOOL) getIsLoading;

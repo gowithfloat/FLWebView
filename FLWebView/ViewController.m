@@ -30,6 +30,10 @@
     [[self webView] setDelegateViews: self];
     [self webView].autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     [self view].autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    
+    // Just to show *something* on load, we go to Google.
+    
+    [[self webView] loadRequestFromString:@"http://www.google.com"];
 }
 
 - (BOOL) shouldAutorotateToInterfaceOrientation: (UIInterfaceOrientation) toInterfaceOrientation
