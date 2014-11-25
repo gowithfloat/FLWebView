@@ -3,7 +3,7 @@
 
 [![](./float-logo.png)](http://floatlearning.com/)
 
-WKWebView with UIWebView fallback. WIP
+This is an example Xcode project demonstrating how to use WKWebView in iOS 8 with a UIWebView fallback for earlier versions of iOS.
 
 # Tools
 
