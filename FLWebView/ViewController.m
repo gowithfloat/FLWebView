@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+// Required for WKWebView calls to "see" our categories
 #import "UIWebView+FLUIWebView.h"
 #import "WKWebView+FLWKWebView.h"
 
@@ -16,8 +17,14 @@
 
 @implementation ViewController
 
+/*
+ * Called when the view has completed loading. Time to set up our WebView!
+ */
 - (void) viewDidLoad {
     [super viewDidLoad];
+    
+    // Check if WKWebView is available
+    // If it is present, create a WKWebView. If not, create a UIWebView.
     
     if (NSClassFromString(@"WKWebView")) {
         _webView = [[WKWebView alloc] initWithFrame: self.view.bounds];
