@@ -5,7 +5,7 @@
 
 This is an example Xcode project demonstrating how to use [WKWebView](https://developer.apple.com/library/ios/documentation/WebKit/Reference/WKWebView_Ref/index.html) in iOS 8 with a [UIWebView](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIWebView_Class/index.html#//apple_ref/doc/uid/TP40006950) fallback for earlier versions of iOS. A full discussion of this code is available [here](#). Basically, we created a [protocol](http://iosdevelopertips.com/objective-c/the-basics-of-protocols-and-delegates.html) that unifies the functionality we'd like to have in a `WebView`, and then created [categories](http://macdevelopertips.com/objective-c/objective-c-categories.html) that ensure we have the proper methods in our `UIWebView` and `WKWebView` classes. 
 
-These are used in the [ViewController](./FLWebView/ViewController.m) `viewDidLoad` method to create a simple "`FLWebView`" and add it to the active view. The code [checks for `WKWebKit`](https://github.com/floatlearning/FLWebView/blob/master/FLWebView/ViewController.m#L29) and, if present, uses `WKWebView`. If it's not there, it defaults to `UIWebView`.
+These are used in the [ViewController](./FLWebView/ViewController.m) `viewDidLoad` method to create a web view and add it to the active view. The code [checks for `WKWebKit`](https://github.com/floatlearning/FLWebView/blob/master/FLWebView/ViewController.m#L29) and, if present, uses `WKWebView`. If it's not there, it defaults to `UIWebView`.
 
 # Usage
 
