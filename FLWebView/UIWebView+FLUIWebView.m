@@ -25,7 +25,7 @@
     [self loadRequest: [NSURLRequest requestWithURL:[NSURL URLWithString: urlNameAsString]]];
 }
 
-- (NSURL *) getCurrentURL
+- (NSURL *) URL
 {
     return self.request.URL;
 }
