@@ -163,26 +163,39 @@
 
 #pragma mark - Shared Delegate Methods
 
+/*
+ * This is called whenever the web view wants to navigate.
+*/
 - (BOOL) shouldStartDecidePolicy: (NSURLRequest *) request
 {
-    // do stuff
+    // Determine whether or not navigation should be allowed.
+    // Return YES if it should, NO if not.
     
     return YES;
 }
 
+/*
+ * This is called whenever the web view has started navigating.
+*/
 - (void) didStartNavigation
 {
-    // do stuff
+    // Update things like loading indicators here.
 }
 
+/*
+ * This is called when navigation failed.
+*/
 - (void) failLoadOrNavigation: (NSURLRequest *) request withError: (NSError *) error
 {
-    // do stuff
+    // Notify the user that navigation failed, provide a reason, and so on.
 }
 
+/*
+ * This is called when navigation succeeds and is complete.
+*/
 - (void) finishLoadOrNavigation: (NSURLRequest *) request
 {
-    // do stuff
+    // Remove the loading indicator, maybe update the navigation bar's title if you have one.
 }
 
 @end
