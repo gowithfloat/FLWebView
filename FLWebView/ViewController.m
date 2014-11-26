@@ -25,49 +25,79 @@
     
     // Check if WKWebView is available
     // If it is present, create a WKWebView. If not, create a UIWebView.
-    
     if (NSClassFromString(@"WKWebView")) {
         _webView = [[WKWebView alloc] initWithFrame: self.view.bounds];
     } else {
         _webView = [[UIWebView alloc] initWithFrame: self.view.bounds];
     }
     
+    // Add the webView to the current view.
     [self.view addSubview: [self webView]];
+    
+    // Assign this view controller as the delegate view.
+    // The delegate methods are below, and include methods for UIWebViewDelegate, WKNavigationDelegate, and WKUIDelegate
     [[self webView] setDelegateViews: self];
+    
+    // Ensure that everything will resize on device rotate.
     [self webView].autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     [self view].autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     
     // Just to show *something* on load, we go to Google.
-    
     [[self webView] loadRequestFromString:@"http://www.google.com"];
 }
 
+/*
+ * Enable rotating the view when the device rotates.
+ */
 - (BOOL) shouldAutorotateToInterfaceOrientation: (UIInterfaceOrientation) toInterfaceOrientation
 {
     return YES;
 }
 
-- (BOOL)prefersStatusBarHidden {
+/*
+ * This more or less ensures that the status bar is hidden for this view.
+ * We also set UIStatusBarHidden to true in the Info.plist file.
+ * We hide the status bar so we can use the full screen height without worrying about an offset for the status bar.
+ */
+- (BOOL) prefersStatusBarHidden
+{
     return YES;
 }
 
 #pragma mark - UIWebView Delegate Methods
 
+/*
+ * Called on iOS devices that do not have WKWebView when the UIWebView requests to start loading a URL request.
+ * Note that it just calls shouldStartDecidePolicy, which is a shared delegate method.
+ * Returning YES here would allow the request to complete, returning NO would stop it.
+ */
 - (BOOL) webView: (UIWebView *) webView shouldStartLoadWithRequest: (NSURLRequest *) request navigationType: (UIWebViewNavigationType) navigationType
 {
     return [self shouldStartDecidePolicy: request];
 }
 
+/*
+ * Called on iOS devices that do not have WKWebView when the UIWebView starts loading a URL request.
+ * Note that it just calls didStartNavigation, which is a shared delegate method.
+ */
 - (void) webViewDidStartLoad: (UIWebView *) webView
 {
     [self didStartNavigation];
 }
 
+/*
+ * Called on iOS devices that do not have WKWebView when a URL request load failed.
+ * Note that it just calls failLoadOrNavigation, which is a shared delegate method.
+ */
 - (void) webView: (UIWebView *) webView didFailLoadWithError: (NSError *) error
 {
     [self failLoadOrNavigation: webView.request withError: error];
 }
 
+/*
+ * Called on iOS devices that do not have WKWebView when the UIWebView finishes loading a URL request.
+ * Note that it just calls finishLoadOrNavigation, which is a shared delegate method.
+ */
 - (void) webViewDidFinishLoad: (UIWebView *) webView
 {
     [self finishLoadOrNavigation: webView.request];
@@ -75,33 +105,58 @@
 
 #pragma mark - WKWebView Delegate Methods
 
-- (void) webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler
+/*
+ * Called on iOS devices that have WKWebView when the web view wants to start
+ * Note that it calls shouldStartDecidePolicy, which is a shared delegate method, but it's essentially passing the result of that method into decisionHandler, which is a block.
+ */
+- (void) webView: (WKWebView *) webView decidePolicyForNavigationAction: (WKNavigationAction *) navigationAction decisionHandler: (void (^)(WKNavigationActionPolicy)) decisionHandler
 {
     decisionHandler([self shouldStartDecidePolicy: navigationAction.request]);
 }
 
-- (void) webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation
+/*
+ * Called on iOS devices that have WKWebView when the web view starts loading a URL request.
+ * Note that it just calls didStartNavigation, which is a shared delegate method.
+ */
+- (void) webView: (WKWebView *) webView didStartProvisionalNavigation: (WKNavigation *) navigation
 {
     [self didStartNavigation];
 }
 
-- (void) webView:(WKWebView *)webView didFailProvisionalNavigation:(WKNavigation *)navigation withError:(NSError *)error
+/*
+ * Called on iOS devices that have WKWebView when the web view fails to load a URL request.
+ * Note that it just calls failLoadOrNavigation, which is a shared delegate method, 
+ * but it has to retrieve the active request from the web view as WKNavigation doesn't contain a reference to it.
+ */
+- (void) webView:(WKWebView *) webView didFailProvisionalNavigation: (WKNavigation *) navigation withError: (NSError *) error
 {
-    
+    [self failLoadOrNavigation: [[self webView] request] withError: error];
 }
 
-- (void) webView:(WKWebView *)webView didCommitNavigation:(WKNavigation *)navigation
+/*
+ * Called on iOS devices that have WKWebView when the web view finishes loading a URL request.
+ * Note that it just calls shouldStartDecidePolicy, which is a shared delegate method.
+ */
+- (void) webView: (WKWebView *) webView didCommitNavigation: (WKNavigation *) navigation
 {
     webView.request = [NSURLRequest requestWithURL: webView.URL];
     
 }
 
-- (void) webView:(WKWebView *)webView didFailNavigation:(WKNavigation *)navigation withError:(NSError *)error
+/*
+ * Called on iOS devices that do not have WKWebView when the UIWebView starts loading a URL request.
+ * Note that it just calls shouldStartDecidePolicy, which is a shared delegate method.
+ */
+- (void) webView: (WKWebView *) webView didFailNavigation: (WKNavigation *) navigation withError: (NSError *) error
 {
     [self failLoadOrNavigation: [NSURLRequest requestWithURL: webView.URL] withError: error];
 }
 
-- (void) webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation
+/*
+ * Called on iOS devices that do not have WKWebView when the UIWebView starts loading a URL request.
+ * Note that it just calls shouldStartDecidePolicy, which is a shared delegate method.
+ */
+- (void) webView: (WKWebView *) webView didFinishNavigation: (WKNavigation *) navigation
 {
     [self finishLoadOrNavigation: [NSURLRequest requestWithURL: webView.URL]];
 }
