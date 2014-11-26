@@ -29,12 +29,15 @@ sh test.sh
 
 There you go! Of course, you can this in Xcode, but this setup is great if you want to do some continuous integration, as `Travis` already has `xctool` installed by default.
 
+# Notes
+
+If you're getting code signing errors with an Objective-C project in `Travis`, make sure that your build script specifies `-sdk iphonesimulator` *and* `-test-sdk iphonesimulator`. Also, if your `.travis.yml` file targets the script you're using locally (in our case, `.travis.yml` specifies `script: sh test.sh`) it makes the debug process a bit simpler.
+
 # Tools
 
 * [travis-ci](https://travis-ci.org/) - Automated unit testing.
 * [travis-lint](http://docs.travis-ci.com/user/getting-started/#Validate-Your-.travis.yml) - Local `Travis` settings validation.
 * [xctool](https://github.com/facebook/xctool) - Command-line `iOS` build scripts.
-* [travis-cli](https://github.com/travis-ci/travis.rb) - Command-line `Travis` tools for key encryption.
 * [homebrew](http://brew.sh/) - `OS X` package management, used to install `xctool`.
 * [ruby gem](https://rubygems.org/) - `Ruby` package management, used to install `travis-lint`.
 
