@@ -47,9 +47,7 @@
 {
 }
 
-- (NSURL *) getCurrentURL
 {
-    return self.URL;
 }
 
 - (void) setScalePagesToFit: (BOOL) setPages
