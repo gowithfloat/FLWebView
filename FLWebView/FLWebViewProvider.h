@@ -15,6 +15,7 @@
 @protocol FLWebViewProvider <NSObject>
 
 /*
+@property (nonatomic, strong) NSURLRequest *request;
  * Assign a delegate view for this webview.
  */
 - (void) setDelegateViews: (UIViewController *) delegateView;
