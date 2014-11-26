@@ -33,7 +33,7 @@
 */
 - (NSURLRequest *) request
 {
-    return self.request;
+    return objc_getAssociatedObject(self, @selector(request));
 }
 
 /*
@@ -41,7 +41,7 @@
  */
 - (void) setRequest: (NSURLRequest *) request
 {
-    [self loadRequest: [NSURLRequest requestWithURL:[NSURL URLWithString: urlNameAsString]]];
+    objc_setAssociatedObject(self, @selector(request), request, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (BOOL) getIsLoading
