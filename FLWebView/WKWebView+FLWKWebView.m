@@ -50,7 +50,10 @@
 {
 }
 
-- (void) setScalePagesToFit: (BOOL) setPages
+/*
+ * This doesn't do anything, as there's no good analogue to scalesPagesToFit in WKWebView.
+*/
+- (void) setScalesPagesToFit: (BOOL) setPages
 {
     return; // not supported in WKWebView
 }
