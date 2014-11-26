@@ -27,11 +27,6 @@
 - (UIView *) getAsUIView;
 
 /*
- * Return the active NSURLRequest of this webview.
- */
-- (NSURLRequest *) getRequest;
-
-/*
  * Load an NSURLRequest in the active webview.
  */
 - (void) loadRequest: (NSURLRequest *) request;
