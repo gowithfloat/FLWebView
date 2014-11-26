@@ -112,7 +112,7 @@
 {
     // do stuff
     
-    return true;
+    return YES;
 }
 
 - (void) didStartNavigation
