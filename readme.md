@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/floatlearning/flwebview.png?label=ready&title=Ready)](https://waffle.io/floatlearning/flwebview)
 [FLWebView](https://github.com/floatlearning/FLWebView/) [![Build Status](https://travis-ci.org/floatlearning/FLWebView.svg?branch=master)](https://travis-ci.org/floatlearning/FLWebView)
 =========
 
