@@ -11,8 +11,6 @@
 
 @interface WKWebView (FLWKWebView) <FLWebViewProvider>
 
-@property (nonatomic, strong) NSURLRequest *request;
-
 - (void) setDelegateViews: (UIView<WKNavigationDelegate, WKUIDelegate> *) delegateView;
 
 @end
