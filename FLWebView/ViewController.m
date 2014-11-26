@@ -33,7 +33,6 @@
     }
     
     [self.view addSubview: [self webView]];
-    [self.view bringSubviewToFront: [self webView]];
     [[self webView] setDelegateViews: self];
     [self webView].autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     [self view].autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
