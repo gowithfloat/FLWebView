@@ -35,7 +35,7 @@
     return self.request.URL;
 }
 
-- (void) evaluateJavaScript: (NSString *) javaScriptString completionHandler: (void (^)(id, NSError *)) completionHandler;
+- (void) evaluateJavaScript: (NSString *) javaScriptString completionHandler: (void (^)(id, NSError *)) completionHandler
 {
     NSString *string = [self stringByEvaluatingJavaScriptFromString: javaScriptString];
     
