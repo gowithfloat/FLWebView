@@ -25,11 +25,6 @@
     [self loadRequest: [NSURLRequest requestWithURL:[NSURL URLWithString: urlNameAsString]]];
 }
 
-- (BOOL) getIsLoading
-{
-    return self.isLoading;
-}
-
 - (NSURL *) getCurrentURL
 {
     return self.request.URL;
