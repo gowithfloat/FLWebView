@@ -11,23 +11,35 @@
 
 @implementation WKWebView (FLWKWebView)
 
+/*
+ * Sets a given delegateView as the delegate for this web view.
+*/
 - (void) setDelegateViews: (UIView<WKNavigationDelegate,WKUIDelegate> *) delegateView
 {
     self.navigationDelegate = delegateView;
     self.UIDelegate = delegateView;
 }
 
+/*
+ * Returns this web view as a UIView.
+*/
 - (UIView *) getAsUIView
 {
     return self;
 }
 
-- (NSURLRequest *) getRequest
+/*
+ * Getter for the active request. UIWebView has this, but WKWebView does not, so we add it here.
+*/
+- (NSURLRequest *) request
 {
     return self.request;
 }
 
-- (void) loadRequestFromString: (NSString *) urlNameAsString
+/*
+ * Setter for the active request.
+ */
+- (void) setRequest: (NSURLRequest *) request
 {
     [self loadRequest: [NSURLRequest requestWithURL:[NSURL URLWithString: urlNameAsString]]];
 }
