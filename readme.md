@@ -41,6 +41,9 @@ If you're getting code signing errors with an Objective-C project in `Travis`, m
 * [homebrew](http://brew.sh/) - `OS X` package management, used to install `xctool`.
 * [ruby gem](https://rubygems.org/) - `Ruby` package management, used to install `travis-lint`.
 
+# References
+[NSHipster: Method Swizzling](http://nshipster.com/method-swizzling/)
+
 # License
 
 &copy; 2014 [Float Mobile Learning](http://floatlearning.com/). Shared under an [MIT license](https://en.wikipedia.org/wiki/MIT_License). See [license.md](./license.md) for details.
