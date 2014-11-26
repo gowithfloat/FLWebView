@@ -16,6 +16,7 @@
 
 /*
 @property (nonatomic, strong) NSURLRequest *request;
+@property (nonatomic, strong) NSURL *URL;
  * Assign a delegate view for this webview.
  */
 - (void) setDelegateViews: (UIViewController *) delegateView;
