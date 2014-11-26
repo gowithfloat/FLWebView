@@ -46,4 +46,5 @@
  */
 - (BOOL) canGoBack;
 
+- (void) evaluateJavaScript: (NSString *) javaScriptString completionHandler: (void (^)(id, NSError *)) completionHandler;
 @end
