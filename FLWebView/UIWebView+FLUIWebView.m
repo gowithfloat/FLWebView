@@ -20,11 +20,6 @@
     return self;
 }
 
-- (NSURLRequest *) getRequest
-{
-    return self.request;
-}
-
 - (void) loadRequestFromString: (NSString *) urlNameAsString
 {
     [self loadRequest: [NSURLRequest requestWithURL:[NSURL URLWithString: urlNameAsString]]];
