@@ -9,7 +9,7 @@ These are used in the [ViewController](./FLWebView/ViewController.m) `viewDidLoa
 
 # Usage
 
-This is an example project but you should be able to build this project with little setup. You'll need `homebrew` if you don't have it already (just enter this in the terminal):
+This is an example project but you should be able to build and test it with little setup. Obviously, as this is an iOS project the following steps apply to OS X. You'll need `homebrew` if you don't have it already (just enter this in the terminal):
 
 ```
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
