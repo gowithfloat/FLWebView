@@ -44,9 +44,7 @@
     objc_setAssociatedObject(self, @selector(request), request, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (BOOL) getIsLoading
 {
-    return self.isLoading;
 }
 
 - (NSURL *) getCurrentURL
