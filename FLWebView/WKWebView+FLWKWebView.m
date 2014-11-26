@@ -16,8 +16,8 @@
 */
 - (void) setDelegateViews: (UIView<WKNavigationDelegate,WKUIDelegate> *) delegateView
 {
-    self.navigationDelegate = delegateView;
-    self.UIDelegate = delegateView;
+    [self setNavigationDelegate: delegateView];
+    [self setUIDelegate: delegateView];
 }
 
 /*
@@ -50,7 +50,7 @@
 */
 - (void) altLoadRequest: (NSURLRequest *) request
 {
-    self.request = request;
+    [self setRequest: request];
     
     // Since we swizzled with loadRequest, this will actually call the original loadRequest.
     [self altLoadRequest: request];

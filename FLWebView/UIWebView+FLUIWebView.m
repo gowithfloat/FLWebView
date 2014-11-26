@@ -43,7 +43,7 @@
 */
 - (NSURL *) URL
 {
-    return self.request.URL;
+    return [[self request] URL];
 }
 
 /*

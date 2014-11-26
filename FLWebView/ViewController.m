@@ -26,21 +26,21 @@
     // Check if WKWebView is available
     // If it is present, create a WKWebView. If not, create a UIWebView.
     if (NSClassFromString(@"WKWebView")) {
-        _webView = [[WKWebView alloc] initWithFrame: self.view.bounds];
+        _webView = [[WKWebView alloc] initWithFrame: [[self view] bounds]];
     } else {
-        _webView = [[UIWebView alloc] initWithFrame: self.view.bounds];
+        _webView = [[UIWebView alloc] initWithFrame: [[self view] bounds]];
     }
     
     // Add the webView to the current view.
-    [self.view addSubview: [self webView]];
+    [[self view] addSubview: [self webView]];
     
     // Assign this view controller as the delegate view.
     // The delegate methods are below, and include methods for UIWebViewDelegate, WKNavigationDelegate, and WKUIDelegate
     [[self webView] setDelegateViews: self];
     
     // Ensure that everything will resize on device rotate.
-    [self webView].autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    [self view].autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    [[self webView] setAutoresizingMask: UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
+    [[self view]    setAutoresizingMask: UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
     
     // Just to show *something* on load, we go to Google.
     [[self webView] loadRequestFromString:@"http://www.google.com"];
@@ -91,7 +91,7 @@
  */
 - (void) webView: (UIWebView *) webView didFailLoadWithError: (NSError *) error
 {
-    [self failLoadOrNavigation: webView.request withError: error];
+    [self failLoadOrNavigation: [webView request] withError: error];
 }
 
 /*
@@ -100,7 +100,7 @@
  */
 - (void) webViewDidFinishLoad: (UIWebView *) webView
 {
-    [self finishLoadOrNavigation: webView.request];
+    [self finishLoadOrNavigation: [webView request]];
 }
 
 #pragma mark - WKWebView Delegate Methods
@@ -111,7 +111,7 @@
  */
 - (void) webView: (WKWebView *) webView decidePolicyForNavigationAction: (WKNavigationAction *) navigationAction decisionHandler: (void (^)(WKNavigationActionPolicy)) decisionHandler
 {
-    decisionHandler([self shouldStartDecidePolicy: navigationAction.request]);
+    decisionHandler([self shouldStartDecidePolicy: [navigationAction request]]);
 }
 
 /*
@@ -139,7 +139,7 @@
  */
 - (void) webView: (WKWebView *) webView didCommitNavigation: (WKNavigation *) navigation
 {
-    webView.request = [NSURLRequest requestWithURL: webView.URL];
+    webView.request = [NSURLRequest requestWithURL: [webView URL]];
     
 }
 
@@ -149,7 +149,7 @@
  */
 - (void) webView: (WKWebView *) webView didFailNavigation: (WKNavigation *) navigation withError: (NSError *) error
 {
-    [self failLoadOrNavigation: [NSURLRequest requestWithURL: webView.URL] withError: error];
+    [self failLoadOrNavigation: [NSURLRequest requestWithURL: [webView URL]] withError: error];
 }
 
 /*
@@ -158,7 +158,7 @@
  */
 - (void) webView: (WKWebView *) webView didFinishNavigation: (WKNavigation *) navigation
 {
-    [self finishLoadOrNavigation: [NSURLRequest requestWithURL: webView.URL]];
+    [self finishLoadOrNavigation: [NSURLRequest requestWithURL: [webView URL]]];
 }
 
 #pragma mark - Shared Delegate Methods
