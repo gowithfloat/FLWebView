@@ -59,14 +59,7 @@
     return; // not supported in WKWebView
 }
 
-- (void) setRequest: (NSURLRequest *) request
 {
-    objc_setAssociatedObject(self, @selector(request), request, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
-- (NSURLRequest *) request
-{
-    return objc_getAssociatedObject(self, @selector(request));
 }
 
 @end
