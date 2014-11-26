@@ -100,7 +100,7 @@
         if (didAddMethod) {
             class_replaceMethod(class, swizzledSelector, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod));
         } else {
-            // Otherwise, just swap their implementations.s
+            // Otherwise, just swap their implementations.
             method_exchangeImplementations(originalMethod, swizzledMethod);
         }
     });
