@@ -47,7 +47,12 @@
 {
 }
 
+/*
+ * Essentially creates a URL request from a string and then loads it.
+*/
+- (void) loadRequestFromString: (NSString *) urlNameAsString
 {
+    [self loadRequest: [NSURLRequest requestWithURL:[NSURL URLWithString: urlNameAsString]]];
 }
 
 /*
