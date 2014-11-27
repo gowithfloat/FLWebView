@@ -5,5 +5,4 @@ xctool \
 	-scheme FLWebView \
 	-sdk iphonesimulator \
 	build \
-	test -test-sdk iphonesimulator \
-	test -test-sdk iphonesimulator7.1
+	clean test -test-sdk iphonesimulator -resetSimulator -freshInstall
