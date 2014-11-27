@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
-#import <WebKit/WebKit.h>
 #import "FLWebViewProvider.h"
 #import "ViewController.h"
 #import "UIWebView+FLUIWebView.h"
@@ -25,7 +24,7 @@
 - (void) testExample
 {
     // dummy check
-    XCTAssertTrue(true);
+    XCTAssertTrue(true, @"dummy check failed!");
     
     // create a UI View that conforms to FLWebViewProvider
     UIView <FLWebViewProvider> *webView;
@@ -37,11 +36,11 @@
         webView = [[UIWebView alloc] init];
     }
     
-    XCTAssertNotNil(webView);
+    XCTAssertNotNil(webView, @"webview was instantiated but nil!");
     
     [webView loadRequestFromString: TEST_URL];
     
-    XCTAssertNotNil([webView request]);
-    XCTAssertNotNil([webView URL]);
+    XCTAssertNotNil([webView request], @"webview request was set but nil!");
+    XCTAssertNotNil([webView URL], @"webview request was set but URL was nil!");
 }
 @end
