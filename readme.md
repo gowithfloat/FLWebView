@@ -33,6 +33,10 @@ There you go! Of course, you can this in Xcode, but this setup is great if you w
 
 If you're getting code signing errors with an Objective-C project in `Travis`, make sure that your build script specifies `-sdk iphonesimulator` *and* `-test-sdk iphonesimulator`. Also, if your `.travis.yml` file targets the script you're using locally (in our case, `.travis.yml` specifies `script: sh test.sh`) it makes the debug process a bit simpler.
 
+# Tests
+
+As the goal of this project was not to create an example of good iOS testing, the tests for this repository are very minimal and largely serve largely to verify that we can build and deploy the application without issue. There are some tests to verify that we can instantiate a web view, but these are not particularly robust.
+
 # Tools
 
 * [travis-ci](https://travis-ci.org/) - Automated unit testing.
