@@ -135,18 +135,17 @@
 }
 
 /*
- * Called on iOS devices that have WKWebView when the web view finishes loading a URL request.
- * Note that it just calls shouldStartDecidePolicy, which is a shared delegate method.
+ * Called on iOS devices that have WKWebView when the web view begins loading a URL request.
+ * This could call some sort of shared delegate method, but is unused currently.
  */
 - (void) webView: (WKWebView *) webView didCommitNavigation: (WKNavigation *) navigation
 {
-    webView.request = [NSURLRequest requestWithURL: [webView URL]];
-    
+    // do nothing
 }
 
 /*
- * Called on iOS devices that do not have WKWebView when the UIWebView starts loading a URL request.
- * Note that it just calls shouldStartDecidePolicy, which is a shared delegate method.
+ * Called on iOS devices that have WKWebView when the web view fails to load a URL request.
+ * Note that it just calls failLoadOrNavigation, which is a shared delegate method.
  */
 - (void) webView: (WKWebView *) webView didFailNavigation: (WKNavigation *) navigation withError: (NSError *) error
 {
@@ -154,8 +153,8 @@
 }
 
 /*
- * Called on iOS devices that do not have WKWebView when the UIWebView starts loading a URL request.
- * Note that it just calls shouldStartDecidePolicy, which is a shared delegate method.
+ * Called on iOS devices that have WKWebView when the web view finishes loading a URL request.
+ * Note that it just calls finishLoadOrNavigation, which is a shared delegate method.
  */
 - (void) webView: (WKWebView *) webView didFinishNavigation: (WKNavigation *) navigation
 {
@@ -188,7 +187,7 @@
 */
 - (void) failLoadOrNavigation: (NSURLRequest *) request withError: (NSError *) error
 {
-    // Notify the user that navigation failed, provide a reason, and so on.
+    // Notify the user that navigation failed, provide information on the error, and so on.
 }
 
 /*
