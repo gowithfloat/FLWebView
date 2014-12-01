@@ -42,7 +42,9 @@ If you're getting code signing errors with an Objective-C project in `Travis`, m
 * [ruby gem](https://rubygems.org/) - `Ruby` package management, used to install `travis-lint`.
 
 # References
-[NSHipster: Method Swizzling](http://nshipster.com/method-swizzling/)
+
+* [NSHipster: Method Swizzling](http://nshipster.com/method-swizzling/)
+* [Apple Deveoper: Blocks Programming](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/Blocks/Articles/bxDeclaringCreating.html#//apple_ref/doc/uid/TP40007502-CH4-SW1)
 
 # License
 
