@@ -19,7 +19,7 @@
  */
 @interface ViewController : UIViewController <UIWebViewDelegate, WKNavigationDelegate, WKUIDelegate>
 
-// The main WebView that is set up in the viewDidLoad method.
+// The main web view that is set up in the viewDidLoad method.
 @property (nonatomic) UIView <FLWebViewProvider> *webView;
 
 @end
