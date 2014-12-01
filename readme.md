@@ -35,7 +35,7 @@ If you're getting code signing errors with an Objective-C project in `Travis`, m
 
 # Tests
 
-As the goal of this project was not to create an example of good iOS testing, the tests for this repository are very minimal and largely serve largely to verify that we can build and deploy the application without issue. There are some tests to verify that we can instantiate a web view, but these are not particularly robust.
+As the goal of this project was not to create an example of good iOS testing, the tests for this repository are very minimal and largely serve largely to verify that we can build and deploy the application without issue. There are some tests to verify that we can instantiate a web view, but these are not particularly robust. You can find good information on unit testing in iOS from Apple's iOS Developer Library [here](https://developer.apple.com/library/ios/samplecode/UnitTests/Listings/ReadMe_txt.html#//apple_ref/doc/uid/DTS40011742-ReadMe_txt-DontLinkElementID_10).
 
 # Tools
 
