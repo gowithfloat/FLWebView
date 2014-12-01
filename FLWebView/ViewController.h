@@ -3,7 +3,7 @@
 //  FLWebView
 //
 //  Created by Steve Richey on 11/21/14.
-//  Copyright (c) 2014 Float Mobile Learning. All rights reserved.
+//  Copyright (c) 2014 Float Mobile Learning. Shared under an MIT license. See license.md for details.
 //
 
 // Needed for UIViewController, UIWebViewDelegate, and UIView
