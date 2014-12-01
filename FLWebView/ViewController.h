@@ -15,7 +15,7 @@
 
 /**
  * This is the view controller for the main interface.
- * It also acts as a delegate for the FLWebView.
+ * It also acts as a delegate for the web view.
  */
 @interface ViewController : UIViewController <UIWebViewDelegate, WKNavigationDelegate, WKUIDelegate>
 
