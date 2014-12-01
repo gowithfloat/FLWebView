@@ -106,8 +106,9 @@
 #pragma mark - WKWebView Delegate Methods
 
 /*
- * Called on iOS devices that have WKWebView when the web view wants to start
- * Note that it calls shouldStartDecidePolicy, which is a shared delegate method, but it's essentially passing the result of that method into decisionHandler, which is a block.
+ * Called on iOS devices that have WKWebView when the web view wants to start navigation.
+ * Note that it calls shouldStartDecidePolicy, which is a shared delegate method, 
+ * but it's essentially passing the result of that method into decisionHandler, which is a block.
  */
 - (void) webView: (WKWebView *) webView decidePolicyForNavigationAction: (WKNavigationAction *) navigationAction decisionHandler: (void (^)(WKNavigationActionPolicy)) decisionHandler
 {
