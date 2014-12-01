@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-// Required for WKWebView calls to "see" our categories
+// Required for calls to UIWebView and WKWebView to "see" our categories
 #import "UIWebView+FLUIWebView.h"
 #import "WKWebView+FLWKWebView.h"
 
