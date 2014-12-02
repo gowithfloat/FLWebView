@@ -149,7 +149,7 @@
  */
 - (void) webView: (WKWebView *) webView didFailNavigation: (WKNavigation *) navigation withError: (NSError *) error
 {
-    [self failLoadOrNavigation: [NSURLRequest requestWithURL: [webView URL]] withError: error];
+    [self failLoadOrNavigation: [webView request] withError: error];
 }
 
 /*
@@ -158,7 +158,7 @@
  */
 - (void) webView: (WKWebView *) webView didFinishNavigation: (WKNavigation *) navigation
 {
-    [self finishLoadOrNavigation: [NSURLRequest requestWithURL: [webView URL]]];
+    [self finishLoadOrNavigation: [webView request]];
 }
 
 #pragma mark - Shared Delegate Methods
