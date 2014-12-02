@@ -18,7 +18,7 @@
 */
 - (void) setDelegateViews: (UIView<UIWebViewDelegate> *) delegateView
 {
-    self.delegate = delegateView;
+    [self setDelegate: delegateView];
 }
 
 /*
