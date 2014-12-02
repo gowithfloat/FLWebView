@@ -131,7 +131,7 @@
  */
 - (void) webView:(WKWebView *) webView didFailProvisionalNavigation: (WKNavigation *) navigation withError: (NSError *) error
 {
-    [self failLoadOrNavigation: [[self webView] request] withError: error];
+    [self failLoadOrNavigation: [webView request] withError: error];
 }
 
 /*
