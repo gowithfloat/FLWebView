@@ -3,7 +3,7 @@
 
 [![](./float-logo.png)](http://floatlearning.com/)
 
-**Note: This repository was written in Objective-C. A Swift version is coming soon.**
+*Note: This repository was written in Objective-C. A Swift version is coming soon.*
 
 This is an example Xcode project demonstrating how to use [WKWebView](https://developer.apple.com/library/ios/documentation/WebKit/Reference/WKWebView_Ref/index.html) in iOS 8 with a [UIWebView](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIWebView_Class/index.html#//apple_ref/doc/uid/TP40006950) fallback for earlier versions of iOS. A full discussion of this code is available [here](#). Basically, we created a [protocol](http://iosdevelopertips.com/objective-c/the-basics-of-protocols-and-delegates.html) that unifies the functionality we'd like to have in a `WebView`, and then created [categories](http://macdevelopertips.com/objective-c/objective-c-categories.html) that ensure we have the proper methods in our `UIWebView` and `WKWebView` classes.
 
