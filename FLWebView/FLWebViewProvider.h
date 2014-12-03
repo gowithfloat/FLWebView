@@ -32,11 +32,6 @@
 - (void) setDelegateViews: (UIViewController *) delegateView;
 
 /*
- * Returns this as a UIView object, which can be useful for setting properties inherited from UIView.
-*/
-- (UIView *) getAsUIView;
-
-/*
  * Load an NSURLRequest in the active webview.
 */
 - (void) loadRequest: (NSURLRequest *) request;

@@ -24,14 +24,6 @@
 /*
  * Same implementation as FLWKWebView.
 */
-- (UIView *) getAsUIView
-{
-    return self;
-}
-
-/*
- * Same implementation as FLWKWebView.
-*/
 - (void) loadRequestFromString: (NSString *) urlNameAsString
 {
     [self loadRequest: [NSURLRequest requestWithURL:[NSURL URLWithString: urlNameAsString]]];

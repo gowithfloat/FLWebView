@@ -21,14 +21,6 @@
 }
 
 /*
- * Returns this web view as a UIView.
-*/
-- (UIView *) getAsUIView
-{
-    return self;
-}
-
-/*
  * Getter for the active request. UIWebView has this, but WKWebView does not, so we add it here.
 */
 - (NSURLRequest *) request
