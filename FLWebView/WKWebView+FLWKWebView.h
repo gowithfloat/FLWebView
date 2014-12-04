@@ -17,6 +17,6 @@
 /*
  * Shorthand for setting WKUIDelegate and WKNavigationDelegate to the same class.
 */
-- (void) setDelegateViews: (UIView<WKNavigationDelegate, WKUIDelegate> *) delegateView;
+- (void) setDelegateViews: (id <WKNavigationDelegate, WKUIDelegate>) delegateView;
 
 @end

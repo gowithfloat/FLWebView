@@ -29,7 +29,7 @@
 /*
  * Assign a delegate view for this webview.
 */
-- (void) setDelegateViews: (UIViewController *) delegateView;
+- (void) setDelegateViews: (id) delegateView;
 
 /*
  * Load an NSURLRequest in the active webview.

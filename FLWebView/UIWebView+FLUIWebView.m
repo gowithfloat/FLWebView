@@ -16,7 +16,7 @@
  * Since this method is defined in FLWebViewProvider, we can call it in our view controller
  * no matter which web view was used.
 */
-- (void) setDelegateViews: (UIView<UIWebViewDelegate> *) delegateView
+- (void) setDelegateViews: (id <UIWebViewDelegate>) delegateView
 {
     [self setDelegate: delegateView];
 }

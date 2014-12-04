@@ -17,6 +17,6 @@
 /*
  * Shorthand for setting UIWebViewDelegate to a class.
 */
-- (void) setDelegateViews: (UIView<UIWebViewDelegate> *) delegateView;
+- (void) setDelegateViews: (id <UIWebViewDelegate>) delegateView;
 
 @end

@@ -14,7 +14,7 @@
 /*
  * Sets a given delegateView as the delegate for this web view.
 */
-- (void) setDelegateViews: (UIView<WKNavigationDelegate,WKUIDelegate> *) delegateView
+- (void) setDelegateViews: (id <WKNavigationDelegate, WKUIDelegate>) delegateView
 {
     [self setNavigationDelegate: delegateView];
     [self setUIDelegate: delegateView];
