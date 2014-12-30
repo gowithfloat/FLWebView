@@ -1,7 +1,7 @@
 [FLWebView](https://github.com/floatlearning/FLWebView/) [![Build Status](https://travis-ci.org/floatlearning/FLWebView.svg?branch=master)](https://travis-ci.org/floatlearning/FLWebView)
 =========
 
-[![](./float-logo.png)](http://floatlearning.com/)
+<p align="center"><a href="http://floatlearning.com/"><img src="https://avatars0.githubusercontent.com/u/590014" alt="Float Mobile Learning"></a></p>
 
 *Note: This repository was written in Objective-C. A Swift version is [available here](https://github.com/floatlearning/FLWebView-Swift).*
 
