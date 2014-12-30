@@ -42,8 +42,8 @@
     [[self webView] setAutoresizingMask: UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
     [[self view]    setAutoresizingMask: UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
     
-    // Just to show *something* on load, we go to Google.
-    [[self webView] loadRequestFromString:@"http://www.google.com"];
+    // Just to show *something* on load, we go to our favorite site.
+    [[self webView] loadRequestFromString:@"http://www.floatlearning.com/"];
 }
 
 /*
