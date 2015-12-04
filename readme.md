@@ -1,8 +1,6 @@
 [FLWebView](https://github.com/floatlearning/FLWebView/) [![Build Status](https://travis-ci.org/floatlearning/FLWebView.svg?branch=master)](https://travis-ci.org/floatlearning/FLWebView)
 =========
 
-<p align="center"><a href="http://floatlearning.com/"><img src="https://avatars0.githubusercontent.com/u/590014" alt="Float Mobile Learning"></a></p>
-
 *Note: This repository was written in Objective-C. A Swift version is [available here](https://github.com/floatlearning/FLWebView-Swift).*
 
 This is an example Xcode project demonstrating how to use [WKWebView](https://developer.apple.com/library/ios/documentation/WebKit/Reference/WKWebView_Ref/index.html) in iOS 8 with a [UIWebView](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIWebView_Class/index.html#//apple_ref/doc/uid/TP40006950) fallback for earlier versions of iOS. A full discussion of this code is available [here](http://floatlearning.com/2014/12/one-webview-to-rule-them-all/). Basically, we created a [protocol](http://iosdevelopertips.com/objective-c/the-basics-of-protocols-and-delegates.html) that unifies the functionality we'd like to have in a `WebView`, and then created [categories](http://macdevelopertips.com/objective-c/objective-c-categories.html) that ensure we have the proper methods in our `UIWebView` and `WKWebView` classes.
@@ -54,4 +52,4 @@ As the goal of this project was not to create an example of good iOS testing, th
 
 # License
 
-&copy; 2014 [Float Mobile Learning](http://floatlearning.com/). Shared under an [MIT license](https://en.wikipedia.org/wiki/MIT_License). See [license.md](./license.md) for details.
+&copy; 2014 [Float](http://gowithfloat.com/). Shared under an [MIT license](https://en.wikipedia.org/wiki/MIT_License). See [license.md](./license.md) for details.
