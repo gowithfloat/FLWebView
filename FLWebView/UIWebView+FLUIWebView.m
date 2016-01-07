@@ -56,7 +56,7 @@
  * WKWebView has nothing comparable to scalesPagesToFit, so we use this method instead.
  * Here, we just update scalesPagesToFit. In FLWKWebView, nothing happens.
 */
-- (void) setScalesPageToFit: (BOOL) setPages
+- (void) setScalesPagesToFit: (BOOL) setPages
 {
     self.scalesPageToFit = setPages;
 }
