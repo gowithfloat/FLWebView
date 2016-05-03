@@ -1,0 +1,24 @@
+{
+  "name": "FLWebView",
+  "version": "0.1.1",
+  "summary": "WKWebView with UIWebView fallback for iOS.",
+  "description": "This is an example Xcode project demonstrating how to use WKWebView in iOS 8 with a UIWebView fallback for earlier versions of iOS.",
+  "homepage": "https://github.com/gowithfloat/FLWebView",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Float": "apps@gowithfloat.com",
+    "Steve Richey": "srichey@gowithfloat.com"
+  },
+  "source": {
+    "git": "https://github.com/gowithfloat/FLWebView.git",
+    "tag": "0.1.1"
+  },
+  "social_media_url": "https://twitter.com/gowithfloat",
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "FLWebView/Classes/**/*"
+}

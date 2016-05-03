@@ -1,8 +1,8 @@
 #!/bin/sh
 
 xctool \
-	-project FLWebView.xcodeproj \
-	-scheme FLWebView \
+	-workspace Example/FLWebView.xcworkspace \
+	-scheme FLWebView-Example \
 	-sdk iphonesimulator \
 	build \
 	clean test -test-sdk iphonesimulator -resetSimulator -freshInstall

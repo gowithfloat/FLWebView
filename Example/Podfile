@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'FLWebView_Example', :exclusive => true do
+  pod 'FLWebView', :path => '../'
+end
+
+target 'FLWebView_Tests', :exclusive => true do
+  pod 'FLWebView', :path => '../'
+
+  
+end

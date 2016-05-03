@@ -1,0 +1,14 @@
+PODS:
+  - FLWebView (0.1.1)
+
+DEPENDENCIES:
+  - FLWebView (from `../`)
+
+EXTERNAL SOURCES:
+  FLWebView:
+    :path: ../
+
+SPEC CHECKSUMS:
+  FLWebView: 02b43735ea7c6879f4039d61ef08cb81d403367d
+
+COCOAPODS: 0.39.0
