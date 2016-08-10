@@ -45,10 +45,18 @@
 */
 - (void) evaluateJavaScript: (NSString *) javaScriptString completionHandler: (void (^)(id, NSError *)) completionHandler
 {
-    NSString *string = [self stringByEvaluatingJavaScriptFromString: javaScriptString];
-    
-    if (completionHandler) {
-        completionHandler(string, nil);
+    // Since with UIWebView we have to call evaluateJavaScript from the main thread
+    // so, this is to make sure we always call this method from the main thread.
+    // Just a note, with WkWebView we can call evaluateJavaScript from any thread.
+    if (![NSThread isMainThread]){
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self evaluateJavaScript: javaScriptString completionHandler:completionHandler];
+        });
+    }else{
+        NSString *string = [self stringByEvaluatingJavaScriptFromString: javaScriptString];
+        if (completionHandler) {
+            completionHandler(string, nil);
+        }
     }
 }
 
